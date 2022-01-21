@@ -50,7 +50,11 @@ wget --no-check-certificate -O dnsmasq_sniproxy.sh https://raw.githubusercontent
 - 确认sniproxy有效运行
 
   查看sni状态：systemctl status sniproxy
-
+  
+  停止sni服务：service sniproxy stop
+  
+  启动sni服务：service sniproxy start
+  
   如果sni不在运行，检查一下是否有其他服务占用80,443端口，以防端口冲突，先将其他服务更改一下监听端口，查看端口监听：netstat -tlunp|grep 443
 
 - 确认防火墙放行80,443,53
